@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffccff, #ffffff);
+    overflow: hidden;
+}
+.front-page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlapped-images {
+    position: relative;
+}
+.overlapped-images img {
+    position: absolute;
+    animation: float 3s ease-in-out infinite;
+}
+.overlapped-images .cake {
+    z-index: 2;
+    left: 30px;
+}
+.overlapped-images .balloons {
+    z-index: 1;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.card {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+}
+.card.open {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.card-header {
+    background: #ff66cc;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+.card-body {
+    padding: 20px;
+    font-size: 1.2rem;
+}
+.card-footer {
+    background: #ff66cc;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff66cc;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.button2 {
+    position: absolute;
+    top: 20px;
+    right:20px;
+    padding: 10px 20px;
+    background-color: #ff66cc;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+
+
+.button1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #ff66cc;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+
+.button:hover {
+    background-color: #e055b8;
+}
+.balloons{
+    bottom: 2px;
+    right:  2px;
+    padding-right: 275px;
+}
